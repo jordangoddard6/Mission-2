@@ -22,8 +22,10 @@ namespace Mission2
             // Loop through each dice roll and add results in results_array
             for (int i = 0; i < rolls; i++)
             {
+                // Get result of each dice roll
                 int result = die1.Next(1, 7) + die2.Next(1, 7);
 
+                // Increment the counter at the appropriate index in results_array for each result
                 if (result == 2)
                 {
                     results_array[0] += 1;

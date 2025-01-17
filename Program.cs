@@ -3,7 +3,8 @@
     internal class Program
     {
         private static void Main(string[] args)
-        {   // Intro text
+        {   
+            // Intro text
             Console.WriteLine("Welcome to the dice throwing simulator!\n");
 
             // Ask user to input desired number of dice rolls and store to rolls variable
@@ -22,6 +23,7 @@
             // Calculate percentage of each number rolled and store in number_percentage array
             for (int i = 0; i < 11; i++)
             {
+                // Calculate percentage of each number rolled and round to integer
                 float rawPercentage = (float)results_array[i] / rolls * 100;
                 number_percentage[i] = (int)Math.Round(rawPercentage);
             }
@@ -34,7 +36,10 @@
             // Display results in histogram
             for (int i = 0; i < 11; i++)
             {
+                // Display result number
                 Console.Write("\n" + (i + 2) + ": ");
+
+                // Write an asterisk for each percentage point for each result
                 for (int j = 0; j < number_percentage[i]; j++)
                 {
                     Console.Write("*");
